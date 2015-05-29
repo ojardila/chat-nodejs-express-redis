@@ -1,0 +1,43 @@
+<% include header.html %>
+
+<body>
+            <div class="panel panel-primary tab-chat">
+                <div class="panel-heading">
+                    <span class="glyphicon glyphicon-comment"></span> Hey <span id="username"><%= username %></span> You are in a chat with: <span id="actual-chat">nobody</span>   <span class='typing' style="display:none"><span class="user"></span> is typing...</span>
+                    <div class="btn-group pull-right">
+                        <button id="openBtn" type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </button>
+                        <ul id="myModal" class="dropdown-menu slidedown">
+
+                            <li><a href="/logout"><span class="glyphicon glyphicon-off"></span>
+                                LogOut</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <ul class="chat" style="display:none">
+                    </ul>
+                </div>
+                <div class="panel-footer">
+                    <div class="input-group">
+                    	<form action="">
+                        <input id="message" type="text" class="form-control input-sm" placeholder="Type your message here...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-warning btn-sm" id="btn-chat">
+                                Send</button></form>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+      <div class="panel panel-primary tab-online-users">
+      <div class="panel-heading">Online users</div>
+      <div class="panel-body"><ul></ul></div>
+    </div>
+
+
+</body>
+</html>
+
+
